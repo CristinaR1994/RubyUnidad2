@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - quiz@localhost" uuid="84a5c1e3-1c59-4f7c-9e27-50b5928a2a62">
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <schema-pattern>quiz.pg_catalog quiz.public</schema-pattern>
+      <default-schemas>quiz.public</default-schemas>
+    </data-source>
+  </component>
+</project>
