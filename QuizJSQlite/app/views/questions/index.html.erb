@@ -1,0 +1,32 @@
+<h1>Lista de Preguntas...</h1>
+<p>Total: <%= @questions.size %></p>
+<p><%= link_to'New Question', new_question_path, :class => 'btn btn-success' %></p>
+<table class="table">
+  <tr>
+    <th>Pregunta</th>
+    <th>Opciónes</th>
+    <th colspan="3">Opciones</th>
+  </tr>
+  <% @questions.each do |question| %>
+  <tr>
+    <td><%= question.text %></td>
+    <td>
+      <ul>
+        <% question.choices.each do |choice| %>
+        <li>
+          <%= choice.text %>
+          <% if choice.correct == 1 %> (correct) <% end %>
+        </li>
+        <% end %>
+      </ul>
+    </td>
+    <td><%= link_to 'show', question, :class => 'btn btn-info' %></td>
+    <td><%= link_to 'Edit', edit_question_path(question), :class => 'btn btn-warning' %></td>
+    <td><%= link_to 'Destroy', question, :confirm => 'Estas seguro ?', :method => :delete, :class => 'btn btn-danger' %></td>
+  </tr>
+      <% end %>
+</table>
+<% content_for(:title) do %>
+All questions
+<% end %>
+<%= link_to 'Realizar Quiz', quiz_index_url, :class => 'btn btn-primary' %>

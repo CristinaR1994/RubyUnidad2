@@ -1,0 +1,7 @@
+<h1>Nueva Pregunta</h1>
+<%= render 'form' %><br/>
+
+<%= link_to 'Back', questions_path, :class => 'btn btn-primary'%>
+<% content_for(:title) do %>
+New Question
+<% end %>
